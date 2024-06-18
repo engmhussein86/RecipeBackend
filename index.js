@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import morgan from 'morgan';
 import cors from 'cors';
 import usersRouter from './routes/users.js';
+import recipesRouter from './routes/recipes.js';
 
 // env variables && connect to MongoDB
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(morgan('dev'))
 app.use(cors());
 app.use(express.json());
 app.use('/users', usersRouter);
+app.use('/recipes', recipesRouter);
 
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');
