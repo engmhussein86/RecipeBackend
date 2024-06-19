@@ -15,9 +15,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
-      favorites: [{
-        type: String, // Assuming we'll store recipe IDs as strings
-      }],
+      bookmarks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' }],
     });
 
 userSchema.index({username: 1});
