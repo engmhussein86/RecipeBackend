@@ -122,7 +122,7 @@ router.get("/:id", async (req, res) => {
 router.delete("/:id",authMiddleware, async (req, res) => {
   const { id } = req.params;
   try {
-    await Recipe.findOneAndDelete(id);
+    await Recipe.findByIdAndDelete(id);
     res.json({ msg: `Recipe with id: ${id} was deleted!` });
   } catch (error) {
     console.log(error.message);
