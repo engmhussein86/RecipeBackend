@@ -1,5 +1,4 @@
 import express from "express";
-import User from "../models/Recipe.js";
 import Recipe from "../models/Recipe.js";
 import axios from 'axios';
 import authMiddleware from '../middleware/authMiddleware.js';
