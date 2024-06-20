@@ -1,7 +1,4 @@
 
-#### backend/README.md
-
-```markdown
 # Recipe Manager Backend
 
 This is the backend part of the Recipe Manager application built with Node.js, Express, and MongoDB. It provides APIs for user authentication, recipe management, and bookmarking.
